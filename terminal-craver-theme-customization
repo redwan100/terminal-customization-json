@@ -6,7 +6,6 @@
       "segments": [
         {
           "background": "#f1184c",
-
           "style": "powerline",
           "template": "\uf0e7",
           "type": "root"
@@ -15,17 +14,18 @@
         {
           "foreground": "#0bf1de",
           "style": "plain",
-          "template": "{{ .UserName }} ",
+          "template": " {{ .UserName }} ",
           "type": "session"
         },
         {
-          "foreground": "#f5087e",
+          "foreground": "#f508ae",
 
           "properties": {
             "folder_separator_icon": "/",
-            "style": "folder"
+            "style": "folder",
+            "folder_icon": ".."
           },
-          "style": "powerline",
+          "style": "plain",
           "template": "\ue5ff {{ .Path }} ",
           "type": "path"
         },
@@ -39,7 +39,7 @@
           },
           "style": "powerline",
 
-          "template": "{{ .UpstreamIcon }}{{ .HEAD }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "template": "\ueb00 git {{ .HEAD }} {{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
           "type": "git"
         },
         {
@@ -71,7 +71,7 @@
         {
           "foreground": "#08f5ed",
           "style": "plain",
-          "template": "⤷",
+          "template": " \udb85\udfa9",
           "type": "text"
         }
       ],
