@@ -1,3 +1,4 @@
+//  \u27BE
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
@@ -12,13 +13,14 @@
         },
 
         {
-          "foreground": "#0bf1de",
+          "foreground": "#08f2de",
           "style": "plain",
           "template": " {{ .UserName }} ",
           "type": "session"
         },
+
         {
-          "foreground": "#f508ae",
+          "foreground": "#ea056c",
 
           "properties": {
             "folder_separator_icon": "/",
@@ -39,25 +41,23 @@
           },
           "style": "powerline",
 
-          "template": "\ueb00 git {{ .HEAD }} {{ if .Staging.Changed }}\uf046 {{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Working.Changed }}\uf044{{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }}\ueb4b{{ .StashCount }}{{ end }} ",
+          "template": "\ueb00 git {{ .HEAD }} {{ if .Staging.Changed }}\uf046{{ .Staging.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Working.Changed }}\uf044{{ .Working.String }}{{ end }}{{ if gt .StashCount 0 }}\ueb4b{{ .StashCount }}{{ end }}",
           "type": "git"
         },
         {
-          "background": "#ef0774",
+          "background": "#ef0760",
           "foreground": "#ffffff",
           "powerline_symbol": "\ue0c4",
           "style": "powerline",
-          "template": " \ue70c {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }} ",
+          "template": "\ue70c {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}",
           "type": "dotnet"
         },
 
         {
-          "background": "#0bf1de",
-          "background_templates": ["{{ if gt .Code 0 }}#f1184c{{ end }}"],
-          "foreground": "#242424",
-          "powerline_symbol": "\ue0b4",
+          "background_templates": ["{{ if gt .Code 0 }}{{end}}"],
+          "foreground": "#f60569",
           "style": "powerline",
-          "template": " \ueb05 ",
+          "template": "\u2718",
           "type": "status"
         }
       ],
